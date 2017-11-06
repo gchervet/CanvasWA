@@ -1,0 +1,11 @@
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Release\CanvasConsoleManager.exe.config
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Release\CanvasConsoleManager.exe.manifest
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Release\CanvasConsoleManager.application
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Release\CanvasConsoleManager.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Release\CanvasConsoleManager.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Release\System.Net.Http.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Release\System.Net.Http.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Release\CanvasConsoleManager.exe.manifest
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Release\CanvasConsoleManager.application
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Release\CanvasConsoleManager.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Release\CanvasConsoleManager.pdb

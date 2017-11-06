@@ -1,0 +1,34 @@
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe.config
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.pdb
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.pdb
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.csprojResolveAssemblyReference.cache
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe.manifest
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.application
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe.manifest
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.application
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\bin\Debug\System.Net.Http.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasConsoleManager\bin\Debug\System.Net.Http.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe.config
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe.manifest
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.application
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\System.Net.Http.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\System.Net.Http.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.csprojResolveAssemblyReference.cache
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe.manifest
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.application
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe.config
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.pdb
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe.manifest
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.application
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.exe
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\bin\Debug\CanvasConsoleManager.pdb
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.csprojResolveAssemblyReference.cache
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe.manifest
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.application

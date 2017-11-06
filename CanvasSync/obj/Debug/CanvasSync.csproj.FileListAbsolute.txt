@@ -1,0 +1,26 @@
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\bin\Debug\CanvasSync.exe.config
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\bin\Debug\CanvasSync.exe
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\bin\Debug\CanvasSync.pdb
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\bin\Debug\Newtonsoft.Json.dll
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\bin\Debug\NLog.dll
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\bin\Debug\Newtonsoft.Json.xml
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\bin\Debug\NLog.xml
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.csprojResolveAssemblyReference.cache
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\obj\Debug\UKSync.ProjectInstaller.resources
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\obj\Debug\UKSync.SyncService.resources
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.csproj.GenerateResource.Cache
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.exe
+C:\Moodle y Canvas\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Debug\CanvasSync.exe.config
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Debug\CanvasSync.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Debug\CanvasSync.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Debug\NLog.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Debug\NLog.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.csprojResolveAssemblyReference.cache
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\UKSync.ProjectInstaller.resources
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\UKSync.SyncService.resources
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.csproj.GenerateResource.Cache

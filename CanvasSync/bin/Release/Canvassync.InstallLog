@@ -1,0 +1,13 @@
+﻿Instalando ensamblado 'C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Canvassync.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Canvassync.InstallLog
+   assemblypath = C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Canvassync.exe
+Instalando el servicio CanvasSync...
+El servicio CanvasSync se ha instalado correctamente.
+Creando el origen de EventLog CanvasSync en el registro Application...
+Confirmando ensamblado 'C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Canvassync.exe'.
+Los parámetros afectados son:
+   logtoconsole = 
+   logfile = C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Canvassync.InstallLog
+   assemblypath = C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Canvassync.exe

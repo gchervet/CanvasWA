@@ -1,0 +1,143 @@
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\ApplicationInsights.config
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\csc.exe
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\vbc.exe
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.dll.config
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.pdb
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\EntityFramework.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\log4net.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Web.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.ApplicationInsights.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Newtonsoft.Json.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\EntityFramework.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\EntityFramework.SqlServer.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\log4net.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Web.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.ApplicationInsights.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\Newtonsoft.Json.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\obj\Release\CanvasWebApi.dll
+C:\Users\gchervet.KENNEDY\documents\visual studio 2015\Projects\CanvasWebApi\CanvasWebApi\obj\Release\CanvasWebApi.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\ApplicationInsights.config
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\csc.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\vbc.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.dll.config
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Web.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.ApplicationInsights.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Newtonsoft.Json.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.SelfHost.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.SqlServer.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Web.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.ApplicationInsights.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\Newtonsoft.Json.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.SelfHost.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\obj\Release\CanvasWebApi.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\obj\Release\CanvasWebApi.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\NLog.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasWebApi\bin\NLog.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\ApplicationInsights.config
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\csc.exe
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\System.Collections.Immutable.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\System.Reflection.Metadata.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\vbc.exe
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\VBCSCompiler.exe
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\roslyn\VBCSCompiler.exe.config
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.dll.config
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\CanvasWebApi.pdb
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.SqlServer.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Agent.Intercept.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.DependencyCollector.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Web.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.WindowsServer.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.ApplicationInsights.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Newtonsoft.Json.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\NLog.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Net.Http.Formatting.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.SelfHost.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.WebHost.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\EntityFramework.SqlServer.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.DependencyCollector.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.Web.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.AI.WindowsServer.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.ApplicationInsights.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\Newtonsoft.Json.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\NLog.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.SelfHost.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Net.Http.Formatting.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\bin\System.Web.Http.WebHost.xml
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\obj\Release\CanvasWebApi.csprojResolveAssemblyReference.cache
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\obj\Release\CanvasWebApi.dll
+\\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasWebApi\obj\Release\CanvasWebApi.pdb

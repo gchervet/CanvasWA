@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CANVAS_Data_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="uniCanvasCarreras">
+          <Key>
+            <PropertyRef Name="Carrera" />
+            <PropertyRef Name="Modalidad" />
+          </Key>
+          <Property Name="Carrera" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Modalidad" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="uniCanvasCursos">
+          <Key>
+            <PropertyRef Name="IDAcademico" />
+          </Key>
+          <Property Name="IDAcademico" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreCustom" Type="varchar" MaxLength="250" />
+          <Property Name="IDCanvas" Type="int" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="Error" Type="varchar(max)" />
+          <Property Name="Fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="uniCanvasCursosSecciones">
+          <Key>
+            <PropertyRef Name="IDAcademico" />
+          </Key>
+          <Property Name="IDAcademico" Type="bigint" Nullable="false" />
+          <Property Name="IDAcademicoCurso" Type="varchar" MaxLength="50" />
+          <Property Name="IDCanvas" Type="int" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="Error" Type="varchar(max)" />
+          <Property Name="Fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="uniCanvasEnrolamientos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDAcademicoUsuario" Type="int" />
+          <Property Name="IDAcademicoSeccion" Type="bigint" />
+          <Property Name="IDCanvas" Type="int" />
+          <Property Name="Operacion" Type="nchar" MaxLength="1" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="Error" Type="varchar(max)" />
+          <Property Name="Fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="uniCanvasUsuarios">
+          <Key>
+            <PropertyRef Name="IDAcademico" />
+          </Key>
+          <Property Name="IDAcademico" Type="int" Nullable="false" />
+          <Property Name="IDCanvas" Type="int" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="Error" Type="varchar(max)" />
+          <Property Name="Fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="uniMaterias">
+          <Key>
+            <PropertyRef Name="codmat" />
+          </Key>
+          <Property Name="codmat" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="periodo" Type="int" />
+          <Property Name="nombre" Type="varchar" MaxLength="35" />
+          <Property Name="coddep" Type="varchar" MaxLength="2" />
+          <Property Name="usrnom" Type="varchar" MaxLength="50" />
+          <Property Name="ftrn" Type="smalldatetime" />
+          <Property Name="vigente" Type="int" />
+          <Property Name="auxi" Type="varchar" MaxLength="5" />
+          <Property Name="hsteoricas" Type="float" />
+          <Property Name="hspracticas" Type="float" />
+          <Property Name="hslaboratorio" Type="float" />
+          <Property Name="hscampo" Type="float" />
+          <Property Name="hsclinica" Type="float" />
+          <Property Name="ConceptoId" Type="varchar" MaxLength="10" />
+          <Property Name="EsOptativaGeneral" Type="bit" />
+        </EntityType>
+        <Function Name="sp_get_uniCanvas_ws_cursos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_get_uniCanvas_ws_enrolamientos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="operacion" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_get_uniCanvas_ws_secciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_get_uniCanvas_ws_usuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_ins_uniCanvas_cursos_secciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_ins_uniCanvas_usuarios_enrolamientos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ciclo" Type="int" Mode="In" />
+          <Parameter Name="cuatri" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_uni_canvas_sincronizacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="CANVAS_Data_ModelStoreContainer">
+          <EntitySet Name="uniCanvasCarreras" EntityType="Self.uniCanvasCarreras" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uniCanvasCursos" EntityType="Self.uniCanvasCursos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uniCanvasCursosSecciones" EntityType="Self.uniCanvasCursosSecciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uniCanvasEnrolamientos" EntityType="Self.uniCanvasEnrolamientos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uniCanvasUsuarios" EntityType="Self.uniCanvasUsuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uniMaterias" EntityType="Self.uniMaterias" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CANVAS_Data_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CANVAS_Model_Entities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_uni_canvas_sincronizacion" ReturnType="Collection(CANVAS_Data_Model.sp_uni_canvas_sincronizacion_Result)" />
+          <EntitySet Name="uniCanvasCarreras" EntityType="CANVAS_Data_Model.uniCanvasCarrera" />
+          <EntitySet Name="uniCanvasCursos" EntityType="CANVAS_Data_Model.uniCanvasCurso" />
+          <EntitySet Name="uniCanvasCursosSecciones" EntityType="CANVAS_Data_Model.uniCanvasCursosSeccione" />
+          <EntitySet Name="uniCanvasEnrolamientos" EntityType="CANVAS_Data_Model.uniCanvasEnrolamiento" />
+          <EntitySet Name="uniCanvasUsuarios" EntityType="CANVAS_Data_Model.uniCanvasUsuario" />
+          <FunctionImport Name="sp_ins_uniCanvas_cursos_secciones" />
+          <FunctionImport Name="sp_ins_uniCanvas_usuarios_enrolamientos">
+            <Parameter Name="ciclo" Mode="In" Type="Int32" />
+            <Parameter Name="cuatri" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="uniMaterias" EntityType="CANVAS_Data_Model.uniMateria" />
+          <FunctionImport Name="sp_get_uniCanvas_ws_cursos" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_cursos_Result)" />
+          <FunctionImport Name="sp_get_uniCanvas_ws_enrolamientos" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_enrolamientos_Result)">
+            <Parameter Name="operacion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_get_uniCanvas_ws_secciones" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_secciones_Result)" />
+          <FunctionImport Name="sp_get_uniCanvas_ws_usuarios" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_usuarios_Result)" />
+          </EntityContainer>
+        <ComplexType Name="sp_uni_canvas_sincronizacion_Result">
+          <Property Type="Int32" Name="IdEntidad" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvas" Nullable="true" />
+          <Property Type="Int32" Name="Estado" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Error" Nullable="true" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <EntityType Name="uniCanvasCarrera">
+          <Key>
+            <PropertyRef Name="Carrera" />
+            <PropertyRef Name="Modalidad" />
+          </Key>
+          <Property Name="Carrera" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Modalidad" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="uniCanvasCurso">
+          <Key>
+            <PropertyRef Name="IDAcademico" />
+          </Key>
+          <Property Name="IDAcademico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreCustom" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IDCanvas" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="uniCanvasCursosSeccione">
+          <Key>
+            <PropertyRef Name="IDAcademico" />
+          </Key>
+          <Property Name="IDAcademico" Type="Int64" Nullable="false" />
+          <Property Name="IDAcademicoCurso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDCanvas" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="uniCanvasEnrolamiento">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDAcademicoUsuario" Type="Int32" />
+          <Property Name="IDAcademicoSeccion" Type="Int64" />
+          <Property Name="IDCanvas" Type="Int32" />
+          <Property Name="Operacion" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="uniCanvasUsuario">
+          <Key>
+            <PropertyRef Name="IDAcademico" />
+          </Key>
+          <Property Name="IDAcademico" Type="Int32" Nullable="false" />
+          <Property Name="IDCanvas" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="uniMateria">
+          <Key>
+            <PropertyRef Name="codmat" />
+          </Key>
+          <Property Name="codmat" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="periodo" Type="Int32" />
+          <Property Name="nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="coddep" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="usrnom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ftrn" Type="DateTime" Precision="0" />
+          <Property Name="vigente" Type="Int32" />
+          <Property Name="auxi" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="hsteoricas" Type="Double" />
+          <Property Name="hspracticas" Type="Double" />
+          <Property Name="hslaboratorio" Type="Double" />
+          <Property Name="hscampo" Type="Double" />
+          <Property Name="hsclinica" Type="Double" />
+          <Property Name="ConceptoId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EsOptativaGeneral" Type="Boolean" />
+        </EntityType>
+        <ComplexType Name="sp_get_uniCanvas_ws_cursos_Result">
+          <Property Type="String" Name="IDAcademico" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+        </ComplexType>
+        <ComplexType Name="sp_get_uniCanvas_ws_usuarios_Result">
+          <Property Type="Int32" Name="IDAcademico" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Apellido" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="EMail" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_get_uniCanvas_ws_enrolamientos_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="IDAcademicoSeccion" Nullable="true" />
+          <Property Type="Int32" Name="IDAcademicoUsuario" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvasUsuario" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvasSeccion" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvasEnrolamiento" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_get_uniCanvas_ws_secciones_Result">
+          <Property Type="Int64" Name="IDAcademico" Nullable="false" />
+          <Property Type="String" Name="IDAcademicoCurso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+          <Property Type="Int32" Name="IDCanvasCurso" Nullable="true" />
+        </ComplexType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CANVAS_Data_ModelStoreContainer" CdmEntityContainer="CANVAS_Model_Entities">
+          <FunctionImportMapping FunctionImportName="sp_uni_canvas_sincronizacion" FunctionName="CANVAS_Data_Model.Store.sp_uni_canvas_sincronizacion" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CANVAS_Data_Model.sp_uni_canvas_sincronizacion_Result">
+                <ScalarProperty Name="IdEntidad" ColumnName="IdEntidad" />
+                <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="uniCanvasCarreras">
+            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasCarrera">
+              <MappingFragment StoreEntitySet="uniCanvasCarreras">
+                <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uniCanvasCursos">
+            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasCurso">
+              <MappingFragment StoreEntitySet="uniCanvasCursos">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+                <ScalarProperty Name="NombreCustom" ColumnName="NombreCustom" />
+                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uniCanvasCursosSecciones">
+            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasCursosSeccione">
+              <MappingFragment StoreEntitySet="uniCanvasCursosSecciones">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+                <ScalarProperty Name="IDAcademicoCurso" ColumnName="IDAcademicoCurso" />
+                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uniCanvasEnrolamientos">
+            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasEnrolamiento">
+              <MappingFragment StoreEntitySet="uniCanvasEnrolamientos">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Operacion" ColumnName="Operacion" />
+                <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+                <ScalarProperty Name="IDAcademicoSeccion" ColumnName="IDAcademicoSeccion" />
+                <ScalarProperty Name="IDAcademicoUsuario" ColumnName="IDAcademicoUsuario" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uniCanvasUsuarios">
+            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasUsuario">
+              <MappingFragment StoreEntitySet="uniCanvasUsuarios">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_ins_uniCanvas_cursos_secciones" FunctionName="CANVAS_Data_Model.Store.sp_ins_uniCanvas_cursos_secciones" />
+          <FunctionImportMapping FunctionImportName="sp_ins_uniCanvas_usuarios_enrolamientos" FunctionName="CANVAS_Data_Model.Store.sp_ins_uniCanvas_usuarios_enrolamientos" />
+          <EntitySetMapping Name="uniMaterias">
+            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniMateria">
+              <MappingFragment StoreEntitySet="uniMaterias">
+                <ScalarProperty Name="EsOptativaGeneral" ColumnName="EsOptativaGeneral" />
+                <ScalarProperty Name="ConceptoId" ColumnName="ConceptoId" />
+                <ScalarProperty Name="hsclinica" ColumnName="hsclinica" />
+                <ScalarProperty Name="hscampo" ColumnName="hscampo" />
+                <ScalarProperty Name="hslaboratorio" ColumnName="hslaboratorio" />
+                <ScalarProperty Name="hspracticas" ColumnName="hspracticas" />
+                <ScalarProperty Name="hsteoricas" ColumnName="hsteoricas" />
+                <ScalarProperty Name="auxi" ColumnName="auxi" />
+                <ScalarProperty Name="vigente" ColumnName="vigente" />
+                <ScalarProperty Name="ftrn" ColumnName="ftrn" />
+                <ScalarProperty Name="usrnom" ColumnName="usrnom" />
+                <ScalarProperty Name="coddep" ColumnName="coddep" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="periodo" ColumnName="periodo" />
+                <ScalarProperty Name="codmat" ColumnName="codmat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_get_uniCanvas_ws_cursos" FunctionName="CANVAS_Data_Model.Store.sp_get_uniCanvas_ws_cursos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CANVAS_Data_Model.sp_get_uniCanvas_ws_cursos_Result">
+                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_get_uniCanvas_ws_enrolamientos" FunctionName="CANVAS_Data_Model.Store.sp_get_uniCanvas_ws_enrolamientos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CANVAS_Data_Model.sp_get_uniCanvas_ws_enrolamientos_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDAcademicoSeccion" ColumnName="IDAcademicoSeccion" />
+                <ScalarProperty Name="IDAcademicoUsuario" ColumnName="IDAcademicoUsuario" />
+                <ScalarProperty Name="IDCanvasUsuario" ColumnName="IDCanvasUsuario" />
+                <ScalarProperty Name="IDCanvasSeccion" ColumnName="IDCanvasSeccion" />
+                <ScalarProperty Name="IDCanvasEnrolamiento" ColumnName="IDCanvasEnrolamiento" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_get_uniCanvas_ws_secciones" FunctionName="CANVAS_Data_Model.Store.sp_get_uniCanvas_ws_secciones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CANVAS_Data_Model.sp_get_uniCanvas_ws_secciones_Result">
+                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
+                <ScalarProperty Name="IDAcademicoCurso" ColumnName="IDAcademicoCurso" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDCanvasCurso" ColumnName="IDCanvasCurso" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_get_uniCanvas_ws_usuarios" FunctionName="CANVAS_Data_Model.Store.sp_get_uniCanvas_ws_usuarios">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CANVAS_Data_Model.sp_get_uniCanvas_ws_usuarios_Result">
+                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

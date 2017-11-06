@@ -1,0 +1,12 @@
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\CanvasSync.exe.config
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\CanvasSync.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\CanvasSync.pdb
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Newtonsoft.Json.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\NLog.dll
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\Newtonsoft.Json.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\bin\Release\NLog.xml
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Release\UKSync.ProjectInstaller.resources
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Release\UKSync.SyncService.resources
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Release\CanvasSync.csproj.GenerateResource.Cache
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Release\CanvasSync.exe
+C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Release\CanvasSync.pdb
