@@ -52,9 +52,9 @@ namespace CanvasWebApi.Controllers
                     string postData = "{\"course_section\": {\"sis_course_id\" : \"" + sectionDTO.course_section.sis_course_id +
                                         "\",\"name\" : \"" + sectionDTO.course_section.name +
                                         "\",\"sis_section_id\":\"" + sectionDTO.course_section.sis_section_id +
-                                        "\",\"isolate_section\": false}}";
+                                        "\",\"publish\": true" +
+                                        ",\"isolate_section\": false}}";
 
-                    //string postData = new JavaScriptSerializer().Serialize(sectionDTO);
                     byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
                     request.ContentType = "application/json";

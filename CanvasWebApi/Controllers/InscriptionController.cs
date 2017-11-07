@@ -131,7 +131,7 @@ namespace CanvasWebApi.Controllers
 
                 request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
 
-                string postData = new JavaScriptSerializer().Serialize("{ \"task\" : \"inactivate\"}");
+                string postData = new JavaScriptSerializer().Serialize("{ \"action\" : \"delete\",\"enrollment:id\":" + iDCanvasEnrolamiento + ", \"sis_course_id\":\"" + iDAcademicoSeccion + "\"}");
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
                 request.ContentType = "application/json";

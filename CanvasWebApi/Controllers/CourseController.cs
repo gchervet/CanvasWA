@@ -47,8 +47,8 @@ namespace CanvasWebApi.Controllers
                                         "\",\"name\" : \"" + courseDTO.course.name +
                                         "\",\"sis_term_id\": \"" + courseDTO.course.term_id +
                                         //"\",\"sis_master_id\": \"" + courseDTO.course.term_id +
-                                        "\",\"import_content:\": false," +
-                                        "\",\"code\": \"" + courseDTO.course.code + "\"}}";
+                                        "\",\"import_content:\": false" +
+                                        ",\"code\": \"" + courseDTO.course.code + "\"}}";
 
                     byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
