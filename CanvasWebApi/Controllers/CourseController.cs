@@ -45,10 +45,11 @@ namespace CanvasWebApi.Controllers
                     string postData = "{\"course\": {\"account_id\" : \"" + courseDTO.course.account_id +
                                         "\",\"sis_course_id\" : \"" + courseDTO.course.sis_course_id +
                                         "\",\"name\" : \"" + courseDTO.course.name +
-                                        "\",\"term_id\": \"" + courseDTO.course.term_id +
+                                        "\",\"sis_term_id\": \"" + courseDTO.course.term_id +
+                                        //"\",\"sis_master_id\": \"" + courseDTO.course.term_id +
+                                        "\",\"import_content:\": false," +
                                         "\",\"code\": \"" + courseDTO.course.code + "\"}}";
 
-                    //string postData = new JavaScriptSerializer().Serialize(courseDTO);
                     byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
                     request.ContentType = "application/json";
