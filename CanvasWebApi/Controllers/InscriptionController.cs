@@ -50,7 +50,7 @@ namespace CanvasWebApi.Controllers
                 {
                     string jsonStr = "{\"enrollment\":{\"user_id\":\"" + inscriptionDTO.enrollment.user_id +
                                      "\",\"type\":\"StudentEnrollment\",\"sis_section_id\":\"" + inscriptionDTO.enrollment.sis_section_id +
-                                     "\",\"state\":\"active\",\"send_notification\":false}}";
+                                     "\",\"state\":\"active\",\"send_notification\":false, \"limit_interaction\":false}}";
 
                     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
                     request.Method = "POST";
