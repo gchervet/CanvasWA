@@ -24,6 +24,7 @@ namespace CanvasWebApi.Controllers
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
         public HttpWebResponse webResponse = null;
+        
         /// <summary>
         /// Verifica si el alumno tiene los datos actualizados en función a la cantidad de meses enviada
         /// </summary>
@@ -131,7 +132,96 @@ namespace CanvasWebApi.Controllers
 
                 request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
 
-                string postData = new JavaScriptSerializer().Serialize("{ \"action\" : \"delete\",\"enrollment:id\":" + iDCanvasEnrolamiento + ", \"sis_course_id\":\"" + iDAcademicoSeccion + "\"}");
+                string postData = new JavaScriptSerializer().Serialize("{ \"action\" : \"deactivate\",\"enrollment:id\":" + iDCanvasEnrolamiento + ", \"sis_course_id\":\"" + iDAcademicoSeccion + "\"}");
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+
+                request.ContentType = "application/json";
+                request.ContentLength = byteArray.Length;
+                Stream dataStream = request.GetRequestStream();
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                dataStream.Close();
+
+                WebResponse response = request.GetResponse();
+                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+                dataStream = response.GetResponseStream();
+
+                StreamReader reader = new StreamReader(dataStream);
+                object rtn = JsonConvert.DeserializeObject<InscriptionReturn>(reader.ReadToEnd());
+                if (rtn != null)
+                {
+                    logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED");
+                    return (InscriptionReturn)rtn;
+                }
+
+                rtn = JsonConvert.DeserializeObject<ErrorMessage>(reader.ReadToEnd());
+                if (rtn != null)
+                {
+                    ErrorMessage errorMessageDto = JsonConvert.DeserializeObject<ErrorMessage>(reader.ReadToEnd());
+                    if (errorMessageDto != null)
+                    {
+                        logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED");
+                        return new InscriptionReturn() { error_message = errorMessageDto.errors.First().message };
+                    }
+                    logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED");
+                    return null;
+                }
+                logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED");
+                return null;
+            }
+            catch (WebException e)
+            {
+                logger.Error("InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: \n " + "  Message: " + e.Message + "\nInner Exception: " + e.InnerException);
+                if (e.Message.Contains(HttpStatusCode.Unauthorized.ToString()))
+                {
+                    HttpContext.Current.Request.Headers.Remove("Authorization");
+                    HttpContext.Current.Request.Headers.Add("Authorization", SessionController.GetToken());
+                    return InactivateInscription(iDAcademicoSeccion, iDCanvasEnrolamiento);
+                }
+
+                if (e.Message.Contains(HttpStatusCode.BadRequest.ToString()))
+                {
+                    var resp = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
+                    JObject obj = JsonConvert.DeserializeObject<JObject>(resp);
+                    if (obj["errors"]["pseudonym"] != null)
+                    {
+                        foreach (var x in obj["errors"]["pseudonym"].First)
+                        {
+                            if (x.First["message"] != null)
+                                return new InscriptionReturn() { error_message = x.First["message"].ToString() };
+                        }
+                    }
+                    return new InscriptionReturn() { error_message = e.ToString() };
+                }
+            }
+            logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED");
+            return null;
+        }
+
+        /// <summary>
+        /// Verifica si el alumno tiene los datos actualizados en función a la cantidad de meses enviada
+        /// </summary>
+        /// <param name="username">Nombre de usuario del alumno</param>
+        /// <param name="cantMeses">Cantidad de meses para verificar, 6 por defecto</param>
+        /// <returns>True si la información está actualizada. False en caso contrario</returns>
+        [Route("ConcludeInscription")]
+        [HttpPost]
+        public InscriptionReturn ConcludeInscription(long? iDAcademicoSeccion, int? iDCanvasEnrolamiento)
+        {
+            logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' STARTED");
+
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            string url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/courses/sis_course_id:" + iDAcademicoSeccion + "/enrollments/" + iDCanvasEnrolamiento;
+
+            try
+            {
+                WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings["BASE_URL"] + url);
+                request.Method = "DELETE";
+
+                request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
+
+                string postData = new JavaScriptSerializer().Serialize("{ \"action\" : \"conclude\",\"enrollment:id\":" + iDCanvasEnrolamiento + ", \"sis_course_id\":\"" + iDAcademicoSeccion + "\"}");
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
                 request.ContentType = "application/json";
