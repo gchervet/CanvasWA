@@ -24,3 +24,16 @@ C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.cspr
 C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\UKSync.ProjectInstaller.resources
 C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\UKSync.SyncService.resources
 C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasSync\obj\Debug\CanvasSync.csproj.GenerateResource.Cache
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\bin\Debug\CanvasSync.exe.config
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\bin\Debug\CanvasSync.exe
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\bin\Debug\CanvasSync.pdb
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\bin\Debug\NLog.dll
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\bin\Debug\NLog.xml
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\obj\Debug\CanvasSync.csprojResolveAssemblyReference.cache
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\obj\Debug\UKSync.ProjectInstaller.resources
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\obj\Debug\UKSync.SyncService.resources
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\obj\Debug\CanvasSync.csproj.GenerateResource.Cache
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\obj\Debug\CanvasSync.exe
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasSync\obj\Debug\CanvasSync.pdb

@@ -37,6 +37,8 @@ namespace CanvasWebApi.Controllers
         {
             logger.Info("InscriptionService/CreateBySectionId - Task 'Create inscription' STARTED");
 
+            string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
+
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
@@ -45,12 +47,12 @@ namespace CanvasWebApi.Controllers
             {
                 string url = string.Empty;
 
-                url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/sections/sis_section_id:" + sis_section_id + "/enrollments";
+                url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + @"/api/lms/v1/sections/sis_section_id:" + sis_section_id + "/enrollments";
 
                 try
                 {
-                    string jsonStr = "{\"enrollment\":{\"user_id\":\"" + inscriptionDTO.enrollment.user_id +
-                                     "\",\"type\":\"StudentEnrollment\",\"sis_section_id\":\"" + inscriptionDTO.enrollment.sis_section_id +
+                    string jsonStr = "{\"enrollment\":{\"user_id\":" + inscriptionDTO.enrollment.user_id +
+                                     ",\"type\":\"StudentEnrollment\",\"sis_section_id\":\"" + inscriptionDTO.enrollment.sis_section_id +
                                      "\",\"state\":\"active\",\"send_notification\":false, \"limit_interaction\":false}}";
 
                     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -123,11 +125,13 @@ namespace CanvasWebApi.Controllers
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
-            string url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/courses/sis_course_id:" + iDAcademicoSeccion + "/enrollments/" + iDCanvasEnrolamiento;
+            string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
+
+            string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoSeccion + "/enrollments/" + iDCanvasEnrolamiento + "?task=deactivate";
 
             try
             {
-                WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings["BASE_URL"] + url);
+                WebRequest request = WebRequest.Create(url);
                 request.Method = "DELETE";
 
                 request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
@@ -135,14 +139,12 @@ namespace CanvasWebApi.Controllers
                 string postData = new JavaScriptSerializer().Serialize("{ \"action\" : \"deactivate\",\"enrollment:id\":" + iDCanvasEnrolamiento + ", \"sis_course_id\":\"" + iDAcademicoSeccion + "\"}");
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
-                request.ContentType = "application/json";
-                request.ContentLength = byteArray.Length;
                 Stream dataStream = request.GetRequestStream();
-                dataStream.Write(byteArray, 0, byteArray.Length);
-                dataStream.Close();
-
+                //dataStream.Write(byteArray, 0, byteArray.Length);
+                //dataStream.Close();
+                //
                 WebResponse response = request.GetResponse();
-                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+                //Console.WriteLine(((HttpWebResponse)response).StatusDescription);
                 dataStream = response.GetResponseStream();
 
                 StreamReader reader = new StreamReader(dataStream);
@@ -209,14 +211,15 @@ namespace CanvasWebApi.Controllers
         {
             logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' STARTED");
 
+            string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
-            string url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/courses/sis_course_id:" + iDAcademicoSeccion + "/enrollments/" + iDCanvasEnrolamiento;
+            string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoSeccion + "/enrollments/" + iDCanvasEnrolamiento;
 
             try
             {
-                WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings["BASE_URL"] + url);
+                WebRequest request = WebRequest.Create(url);
                 request.Method = "DELETE";
 
                 request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
@@ -301,11 +304,12 @@ namespace CanvasWebApi.Controllers
             if (section_id != 0 || sis_section_id != null)
             {
                 string url = string.Empty;
+                string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
 
                 if (section_id != 0 && (sis_section_id == "null" || sis_section_id == null))
-                    url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/sections/" + section_id + "/enrollments";
+                    url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/sections/" + section_id + "/enrollments";
                 if (sis_section_id != null && (section_id == 0 || section_id == null))
-                    url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/sections/sis_section_id:" + sis_section_id + "/enrollments";
+                    url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/sections/sis_section_id:" + sis_section_id + "/enrollments";
 
                 try
                 {

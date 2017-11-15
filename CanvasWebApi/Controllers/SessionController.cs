@@ -26,12 +26,18 @@ namespace CanvasWebApi.Controllers
         [HttpGet]
         public static string GetToken()
         {
-            string url = "https://apis-kennedy.ilumno.com/token?grant_type=client_credentials";
+            // TEST
+            string url = "https://apis-lms.qailumno.com/token?grant_type=client_credentials";
+
+            // PROD
+            //string url = "https://apis-kennedy.ilumno.com/token?grant_type=client_credentials";
             try
             {
+                string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
+
                 HttpWebRequest webReq = (HttpWebRequest)WebRequest.Create(string.Format(url));
                 webReq.Method = "POST";
-                webReq.Headers["Authorization"] = WebConfigurationManager.AppSettings["BASE_TOKEN"];
+                webReq.Headers["Authorization"] = WebConfigurationManager.AppSettings[ambientPrefix + "_BASE_TOKEN"];
                 webReq.UseDefaultCredentials = true;
                 webReq.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
 

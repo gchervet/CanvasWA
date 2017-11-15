@@ -37,16 +37,17 @@ namespace CanvasWebApi.Controllers
             {
                 try
                 {
-                    WebRequest request = WebRequest.Create(@"https://apis-kennedy.qailumno.com:443/kennedy/api/lms/v1/courses");
-                    request.Method = "POST";
+                    string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
+                    WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + @"/api/lms/v1/courses");
 
+                    request.Method = "POST";
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
-                    
+
                     string postData = "{\"course\": {\"account_id\" : \"" + courseDTO.course.account_id +
                                         "\",\"sis_course_id\" : \"" + courseDTO.course.sis_course_id +
                                         "\",\"name\" : \"" + courseDTO.course.name +
                                         "\",\"sis_term_id\": \"" + courseDTO.course.term_id +
-                                        //"\",\"sis_master_id\": \"" + courseDTO.course.term_id +
+                                        "\",\"sis_master_id\": \"" + courseDTO.course.sis_master_id +
                                         "\",\"import_content:\": false" +
                                         ",\"code\": \"" + courseDTO.course.code + "\"}}";
 

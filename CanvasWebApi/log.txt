@@ -74,3 +74,366 @@ ClientConnectionId:f1325970-bda8-4565-bfa8-ec4dcd6883e7
 Error Number:4060,State:1,Class:11
 2017-09-07 15:52:49.3731|INFO|CanvasWebApi.Service.UserService|UserService/SyncToCanvas - Task 'Sync user' FINISHED
 2017-09-07 15:52:49.3991|INFO|CanvasWebApi.Controllers.UserController|UserController/SyncToCanvas - Task 'Create user' FINISHED
+2017-11-15 15:14:27.1041|ERROR|CanvasWebApi.Controllers.CourseController|CourseController/Create - Task 'Create course' FINISHED WITH ERROR: 
+   Message: Error en el servidor remoto: (500) Error interno del servidor.
+Inner Exception: 
+2017-11-15 15:20:14.0741|ERROR|CanvasWebApi.Controllers.CourseController|CourseController/Create - Task 'Create course' FINISHED WITH ERROR: 
+   Message: Error en el servidor remoto: (500) Error interno del servidor.
+Inner Exception: 
+2017-11-15 15:48:26.6583|ERROR|CanvasWebApi.Controllers.CourseController|CourseController/Create - Task 'Create course' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:01:31.6623|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:07:46.1283|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:19:23.6113|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:23.5749|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:26.9689|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:29.0509|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:30.7559|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:32.0369|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:35.0409|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:37.2379|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:39.4239|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:41.5719|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:43.2139|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:45.3459|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:47.4049|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:49.1439|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:51.2959|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:53.0219|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:54.2809|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:55.9659|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:57.6789|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:50:59.3739|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:51:01.1349|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:51:02.8539|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:51:04.1569|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/CreateBySectionId - Task 'Create inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:06.1589|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:08.2719|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:09.8709|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:11.6389|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:14.3539|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:16.4739|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:17.8369|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:19.5199|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:21.7419|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:23.8879|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:25.6369|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:28.3449|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:30.5509|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:32.7009|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:33.9579|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 16:57:36.1009|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 17:25:48.0407|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:07:40.4743|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:34.5407|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:38.2817|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:40.3907|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:42.0047|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:43.6197|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:44.8307|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:46.5177|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:48.2007|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:50.3287|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:52.4497|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:54.5777|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:56.2517|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:57.8837|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:14:59.0867|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:01.1187|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:02.3727|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:04.0477|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:05.2917|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:06.5497|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:08.6157|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:10.3167|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:12.4977|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:14.0777|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:16.1167|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:17.3057|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:18.9697|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:21.0547|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:22.3327|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:23.9577|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:26.0337|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:27.7137|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:29.4007|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:32.0137|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:34.1447|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:36.2457|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:37.4787|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:40.8157|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:42.5547|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:44.2657|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:46.3967|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:48.5837|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:50.7507|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:52.4197|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:54.5617|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:56.7057|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:15:58.8077|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:00.4507|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:02.5877|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:04.2897|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:09.2137|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:11.2987|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:13.4447|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:14.6997|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:16.8657|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:18.5257|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:20.2107|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:22.2697|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:23.9317|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:25.5607|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:27.1757|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:28.8237|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:30.0637|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:31.7337|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:33.4177|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:16:35.0817|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:00.2017|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:02.2677|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:04.3817|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:06.4857|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:08.6327|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:10.7157|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:12.7747|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:51.3077|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:19:54.6827|ERROR|CanvasWebApi.Controllers.InscriptionController|InscriptionService/InactivateInscription - Task 'Inactivate inscription' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 
+2017-11-15 18:43:33.3007|ERROR|CanvasWebApi.Controllers.SectionController|SectionController/Create - Task 'Create section' FINISHED WITH ERROR: 
+   Message: Anulada la solicitud: La conexión ha terminado de forma inesperada.
+Inner Exception: 

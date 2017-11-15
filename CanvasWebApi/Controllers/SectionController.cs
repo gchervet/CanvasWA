@@ -36,11 +36,12 @@ namespace CanvasWebApi.Controllers
             if (sectionDTO != null)
             {
                 string url = string.Empty;
+                string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
 
                 if (course_id != 0 && sis_course_id == null)
-                    url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/courses/" + course_id + "/sections";
+                    url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/" + course_id + "/sections";
                 if (sis_course_id != null && (course_id == 0 || course_id == null))
-                    url = WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/courses/sis_course_id:" + sis_course_id + "/sections";
+                    url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + sis_course_id + "/sections";
 
                 try
                 {
