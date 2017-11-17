@@ -50,11 +50,19 @@ namespace CanvasWebApi.Controllers
 
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
 
-                    string postData = "{\"course_section\": {\"sis_course_id\" : \"" + sectionDTO.course_section.sis_course_id +
-                                        "\",\"name\" : \"" + sectionDTO.course_section.name +
-                                        "\",\"sis_section_id\":\"" + sectionDTO.course_section.sis_section_id +
-                                        "\",\"publish\": true" +
-                                        ",\"isolate_section\": false}}";
+                    string postData = 
+                    "{" +
+                       "\"course_section\": " +
+                       "{" +
+                           "\"name\":" + sectionDTO.course_section.name + "," +
+                           "\"end_at\":" + (sectionDTO.course_section.end_at != null ? ("\"" + sectionDTO.course_section.end_at + "\"") : "null") + "," +
+                           "\"start_at\":" + (sectionDTO.course_section.start_at != null ? ("\"" + sectionDTO.course_section.start_at + "\"") : "null") + "," +
+                           "\"sis_section_id\":\"" + sectionDTO.course_section.sis_section_id + "\"," +
+                           "\"isolate_section\":" + "true" + "," +
+                           "\"restrict_to_dates\":" + "false" +
+                       "}" +
+                   "}";
+
 
                     byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
