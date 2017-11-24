@@ -54,7 +54,7 @@ namespace CanvasWebApi.Controllers
                     "{" +
                        "\"course_section\": " +
                        "{" +
-                           "\"name\":" + sectionDTO.course_section.name + "," +
+                           "\"name\":\"" + sectionDTO.course_section.name + "\"" + "," +
                            "\"end_at\":" + (sectionDTO.course_section.end_at != null ? ("\"" + sectionDTO.course_section.end_at + "\"") : "null") + "," +
                            "\"start_at\":" + (sectionDTO.course_section.start_at != null ? ("\"" + sectionDTO.course_section.start_at + "\"") : "null") + "," +
                            "\"sis_section_id\":\"" + sectionDTO.course_section.sis_section_id + "\"," +

@@ -36,32 +36,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="uniCanvasCursosSecciones">
-      <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasCursosSeccione">
-        <MappingFragment StoreEntitySet="uniCanvasCursosSecciones">
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="Error" ColumnName="Error" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
-          <ScalarProperty Name="IDAcademicoCurso" ColumnName="IDAcademicoCurso" />
-          <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="uniCanvasEnrolamientos">
-      <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasEnrolamiento">
-        <MappingFragment StoreEntitySet="uniCanvasEnrolamientos">
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="Error" ColumnName="Error" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="Operacion" ColumnName="Operacion" />
-          <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
-          <ScalarProperty Name="IDAcademicoSeccion" ColumnName="IDAcademicoSeccion" />
-          <ScalarProperty Name="IDAcademicoUsuario" ColumnName="IDAcademicoUsuario" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="uniCanvasUsuarios">
       <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasUsuario">
         <MappingFragment StoreEntitySet="uniCanvasUsuarios">
@@ -108,6 +82,7 @@
       <ResultMapping>
         <ComplexTypeMapping TypeName="CANVAS_Data_Model.sp_get_uniCanvas_ws_enrolamientos_Result">
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDAcademicoCurso" ColumnName="IDAcademicoCurso" />
           <ScalarProperty Name="IDAcademicoSeccion" ColumnName="IDAcademicoSeccion" />
           <ScalarProperty Name="IDAcademicoUsuario" ColumnName="IDAcademicoUsuario" />
           <ScalarProperty Name="IDCanvasUsuario" ColumnName="IDCanvasUsuario" />
@@ -137,5 +112,33 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="uniCanvasCursosSecciones">
+      <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasCursosSeccione">
+        <MappingFragment StoreEntitySet="uniCanvasCursosSecciones">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+          <ScalarProperty Name="IDAcademicoCurso" ColumnName="IDAcademicoCurso" />
+          <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uniCanvasEnrolamientos">
+      <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasEnrolamiento">
+        <MappingFragment StoreEntitySet="uniCanvasEnrolamientos">
+          <ScalarProperty Name="IDAcademicoGrupo" ColumnName="IDAcademicoGrupo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Operacion" ColumnName="Operacion" />
+          <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+          <ScalarProperty Name="IDAcademicoSeccion" ColumnName="IDAcademicoSeccion" />
+          <ScalarProperty Name="IDAcademicoUsuario" ColumnName="IDAcademicoUsuario" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

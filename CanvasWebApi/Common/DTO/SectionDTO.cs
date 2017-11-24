@@ -33,5 +33,6 @@ namespace CanvasWebApi.Common
         public DateTime end_at { get; set; }
         public bool isolate_section { get; set; }
         public string error_message { get; set; }
+        public int? group_id { get; set; }
     }
 }

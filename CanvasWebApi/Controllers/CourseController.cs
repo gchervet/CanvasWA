@@ -53,9 +53,9 @@ namespace CanvasWebApi.Controllers
                             "\"code\":\"" + courseDTO.course.code + "\"," +
                             "\"end_at\":" + (courseDTO.course.end_at != null ? ("\"" + courseDTO.course.end_at + "\"") : "null") + "," +
                             "\"start_at\":" + (courseDTO.course.start_at != null ? ("\"" + courseDTO.course.start_at + "\"") : "null") + "," +
-                            "\"restrict_to_dates\":" + "false" + "," +
-                            "\"sis_master_id\":" + (courseDTO.course.sis_master_id != null ? ("\"" + courseDTO.course.sis_master_id + "\"") : "null") + "," +
-                            "\"sis_term_id\":" + (courseDTO.course.term_id != null ? ("\"" + courseDTO.course.term_id + "\"") : "null") +
+                            "\"restrict_to_dates\":" + "false" +
+                            (courseDTO.course.sis_master_id != null ? ("," + "\"sis_master_id\":\"" + courseDTO.course.sis_master_id + "\",") : "") +
+                            (courseDTO.course.term_id != null ? ("\"sis_term_id\":\"" + courseDTO.course.term_id + "\",") : "") +
                         "}," +
                         "\"import_content\":" + "false" + "," +
                         "\"publish\":" + "true" +

@@ -39,7 +39,6 @@ namespace CanvasWebApi.Common
         public string type { get; set; }
         public string sis_section_id { get; set; }
         public bool send_notification { get; set; }
-        public int group_id { get; set; }
         public string id { get; set; }
         public string sis_course_id { get; set; }
         public string sis_user_id { get; set; }
@@ -53,5 +52,6 @@ namespace CanvasWebApi.Common
         public string enrollment_state { get; set; }
         public Nullable<DateTime> start_at { get; set; }
         public Nullable<DateTime> end_at { get; set; }
+        public Nullable<int> group_id { get; set; }
     }
 }

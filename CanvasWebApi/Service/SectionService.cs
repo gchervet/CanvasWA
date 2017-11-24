@@ -36,7 +36,7 @@ namespace CanvasWebApi.Service
 
                         if (newSection != null)
                         {
-                            SectionDAL.UpdateCanvasData((int)sectionToSync.IDAcademico, newSection);
+                            SectionDAL.UpdateCanvasData((int)sectionToSync.IDAcademico, newSection, newSection.group_id);
                         }
                         logger.Info("SectionService/SyncToCanvas - Task 'Sync section' FINISHED");
                     }
@@ -44,7 +44,7 @@ namespace CanvasWebApi.Service
                     {
                         logger.Error("SectionService/SyncToCanvas - Task 'Sync section' FINISHED WITH ERROR: \n " + "  Message: " + e.Message + "\nInner Exception: " + e.InnerException);
                         SectionDTO newSection = new SectionDTO() { error_message = e.Message };
-                        SectionDAL.UpdateCanvasData((int)sectionToSync.IDAcademico, newSection);
+                        SectionDAL.UpdateCanvasData((int)sectionToSync.IDAcademico, newSection, newSection.group_id);
                     }
                 }
             }

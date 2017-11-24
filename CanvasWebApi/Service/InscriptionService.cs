@@ -46,7 +46,12 @@ namespace CanvasWebApi.Service
                             else if (enrollmentOperation == CanvasWebApi.Common.ConfigEnum.Enrollment_Operation.B)
                             {
                                 // TODO: Llamar a la inactivate inscription
-                                InscriptionReturn newInscription = (InscriptionReturn)inscriptionController.InactivateInscription(inscriptionToSync.IDAcademicoSeccion, inscriptionToSync.IDCanvasEnrolamiento);
+                                InscriptionReturn newInscription = (InscriptionReturn)inscriptionController.InactivateInscription(inscriptionToSync.IDAcademicoCurso, inscriptionToSync.IDCanvasEnrolamiento);
+
+                                if (newInscription != null)
+                                {
+                                    InscriptionDAL.UpdateCanvasData((int)inscriptionToSync.ID, newInscription);
+                                }
                             }
 
                         }

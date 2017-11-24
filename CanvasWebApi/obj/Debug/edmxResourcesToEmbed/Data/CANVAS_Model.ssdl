@@ -29,6 +29,7 @@
     <Property Name="Estado" Type="int" />
     <Property Name="Error" Type="varchar(max)" />
     <Property Name="Fecha" Type="datetime" />
+    <Property Name="GroupId" Type="int" />
   </EntityType>
   <EntityType Name="uniCanvasEnrolamientos">
     <Key>
@@ -42,6 +43,7 @@
     <Property Name="Estado" Type="int" />
     <Property Name="Error" Type="varchar(max)" />
     <Property Name="Fecha" Type="datetime" />
+    <Property Name="IDAcademicoGrupo" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="uniCanvasUsuarios">
     <Key>

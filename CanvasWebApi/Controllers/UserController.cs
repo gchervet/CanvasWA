@@ -44,12 +44,18 @@ namespace CanvasWebApi.Controllers
 
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
 
-                    string postData = "{\"user\": {\"short_name\" : \"" + userDTO.user.full_name +
-                                      "\",\"sortable_name\" : \"" + userDTO.user.full_name +
-                                      "\",\"full_name\" : \"" + userDTO.user.full_name +
-                                      "\",\"login\": \"" + userDTO.user.login +
-                                      "\",\"email\":\"" + userDTO.user.email +
-                                      "\",\"sis_user_id\": \"" + userDTO.user.sis_user_id + "\"}}";
+                    string postData =
+                    "{" +
+                        "\"user\":" +
+                        "{" +
+                            "\"short_name\" : \"" + userDTO.user.full_name + "\"," +
+                                "\"sortable_name\" : \"" + userDTO.user.full_name + "\"," +
+                                "\"full_name\" : \"" + userDTO.user.full_name + "\"," +
+                                "\"login\": \"" + userDTO.user.login + "\"," +
+                                "\"email\":\"" + userDTO.user.email + "\"," +
+                                "\"sis_user_id\": \"" + userDTO.user.sis_user_id + "\"" +
+                        "}" +
+                    "}";
 
                     byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 

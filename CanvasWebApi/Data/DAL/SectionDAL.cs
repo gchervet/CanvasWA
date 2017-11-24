@@ -52,7 +52,7 @@ namespace CanvasWebApi.Data
             }
         }
 
-        public static void UpdateCanvasData(int? idEntidad, SectionDTO newSection)
+        public static void UpdateCanvasData(int? idEntidad, SectionDTO newSection, int? group_id)
         {
             logger.Info("SectionDAL/SectionsToSync - Task 'Get a list with the sections to sync' STARTED");
             if (newSection != null)
@@ -65,6 +65,7 @@ namespace CanvasWebApi.Data
                         newCanvasCourseSection.Estado = CanvasWebApi.Common.ConfigEnum.CanvasState.Sincronizado.GetHashCode();
                         newCanvasCourseSection.Fecha = DateTime.Now;
                         newCanvasCourseSection.IDCanvas = Int32.Parse(newSection.id);
+                        newCanvasCourseSection.GroupId = group_id;
                     }
                     else
                         newCanvasCourseSection.Estado = CanvasWebApi.Common.ConfigEnum.CanvasState.Error.GetHashCode();

@@ -22,5 +22,6 @@ namespace CanvasWebApi.Data
         public Nullable<int> Estado { get; set; }
         public string Error { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
+        public string IDAcademicoGrupo { get; set; }
     }
 }

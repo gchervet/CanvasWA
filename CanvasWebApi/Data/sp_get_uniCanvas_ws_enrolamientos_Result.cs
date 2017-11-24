@@ -14,6 +14,7 @@ namespace CanvasWebApi.Data
     public partial class sp_get_uniCanvas_ws_enrolamientos_Result
     {
         public long ID { get; set; }
+        public string IDAcademicoCurso { get; set; }
         public Nullable<long> IDAcademicoSeccion { get; set; }
         public Nullable<int> IDAcademicoUsuario { get; set; }
         public Nullable<int> IDCanvasUsuario { get; set; }
