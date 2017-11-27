@@ -39,7 +39,8 @@ namespace CanvasWebApi.Controllers
             {
                 if (userDTO != null)
                 {
-                    WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings["BASE_URL"] + "api/lms/v1/users");
+                    string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
+                    WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/users");
                     request.Method = "POST";
 
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
