@@ -17,8 +17,8 @@
     </FunctionImport>
     <FunctionImport Name="sp_get_uniCanvas_ws_secciones" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_secciones_Result)" />
     <FunctionImport Name="sp_get_uniCanvas_ws_usuarios" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_usuarios_Result)" />
-    <EntitySet Name="uniCanvasCursosSecciones" EntityType="CANVAS_Data_Model.uniCanvasCursosSeccione" />
     <EntitySet Name="uniCanvasEnrolamientos" EntityType="CANVAS_Data_Model.uniCanvasEnrolamiento" />
+    <EntitySet Name="uniCanvasCursosSecciones" EntityType="CANVAS_Data_Model.uniCanvasCursosSeccione" />
   </EntityContainer>
   <ComplexType Name="sp_uni_canvas_sincronizacion_Result">
     <Property Type="Int32" Name="IdEntidad" Nullable="true" />
@@ -97,18 +97,6 @@
     <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
     <Property Type="Int32" Name="IDCanvasCurso" Nullable="true" />
   </ComplexType>
-  <EntityType Name="uniCanvasCursosSeccione">
-    <Key>
-      <PropertyRef Name="IDAcademico" />
-    </Key>
-    <Property Name="IDAcademico" Type="Int64" Nullable="false" />
-    <Property Name="IDAcademicoCurso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IDCanvas" Type="Int32" />
-    <Property Name="Estado" Type="Int32" />
-    <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="Fecha" Type="DateTime" Precision="3" />
-    <Property Name="GroupId" Type="Int32" />
-  </EntityType>
   <ComplexType Name="sp_get_uniCanvas_ws_enrolamientos_Result">
     <Property Type="Int64" Name="ID" Nullable="false" />
     <Property Type="String" Name="IDAcademicoCurso" Nullable="true" MaxLength="50" />
@@ -131,5 +119,17 @@
     <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Fecha" Type="DateTime" Precision="3" />
     <Property Name="IDAcademicoGrupo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="uniCanvasCursosSeccione">
+    <Key>
+      <PropertyRef Name="IDAcademico" />
+    </Key>
+    <Property Name="IDAcademico" Type="Int64" Nullable="false" />
+    <Property Name="IDAcademicoCurso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDCanvas" Type="Int32" />
+    <Property Name="IDCanvasGrupo" Type="Int32" />
+    <Property Name="Estado" Type="Int32" />
+    <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

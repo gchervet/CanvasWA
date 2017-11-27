@@ -26,10 +26,10 @@
     <Property Name="IDAcademico" Type="bigint" Nullable="false" />
     <Property Name="IDAcademicoCurso" Type="varchar" MaxLength="50" />
     <Property Name="IDCanvas" Type="int" />
+    <Property Name="IDCanvasGrupo" Type="int" />
     <Property Name="Estado" Type="int" />
     <Property Name="Error" Type="varchar(max)" />
     <Property Name="Fecha" Type="datetime" />
-    <Property Name="GroupId" Type="int" />
   </EntityType>
   <EntityType Name="uniCanvasEnrolamientos">
     <Key>

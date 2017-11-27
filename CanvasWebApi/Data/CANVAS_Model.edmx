@@ -31,10 +31,10 @@
           <Property Name="IDAcademico" Type="bigint" Nullable="false" />
           <Property Name="IDAcademicoCurso" Type="varchar" MaxLength="50" />
           <Property Name="IDCanvas" Type="int" />
+          <Property Name="IDCanvasGrupo" Type="int" />
           <Property Name="Estado" Type="int" />
           <Property Name="Error" Type="varchar(max)" />
           <Property Name="Fecha" Type="datetime" />
-          <Property Name="GroupId" Type="int" />
         </EntityType>
         <EntityType Name="uniCanvasEnrolamientos">
           <Key>
@@ -121,8 +121,8 @@
           </FunctionImport>
           <FunctionImport Name="sp_get_uniCanvas_ws_secciones" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_secciones_Result)" />
           <FunctionImport Name="sp_get_uniCanvas_ws_usuarios" ReturnType="Collection(CANVAS_Data_Model.sp_get_uniCanvas_ws_usuarios_Result)" />
-          <EntitySet Name="uniCanvasCursosSecciones" EntityType="CANVAS_Data_Model.uniCanvasCursosSeccione" />
           <EntitySet Name="uniCanvasEnrolamientos" EntityType="CANVAS_Data_Model.uniCanvasEnrolamiento" />
+          <EntitySet Name="uniCanvasCursosSecciones" EntityType="CANVAS_Data_Model.uniCanvasCursosSeccione" />
           </EntityContainer>
         <ComplexType Name="sp_uni_canvas_sincronizacion_Result">
           <Property Type="Int32" Name="IdEntidad" Nullable="true" />
@@ -201,27 +201,6 @@
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
           <Property Type="Int32" Name="IDCanvasCurso" Nullable="true" />
         </ComplexType>
-        <EntityType Name="uniCanvasCursosSeccione">
-          <Key>
-            <PropertyRef Name="IDAcademico" />
-          </Key>
-          <Property Name="IDAcademico" Type="Int64" Nullable="false" />
-          <Property Name="IDAcademicoCurso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="IDCanvas" Type="Int32" />
-          <Property Name="Estado" Type="Int32" />
-          <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Fecha" Type="DateTime" Precision="3" />
-          <Property Name="GroupId" Type="Int32" />
-        </EntityType>
-        <ComplexType Name="sp_get_uniCanvas_ws_enrolamientos_Result">
-          <Property Type="Int64" Name="ID" Nullable="false" />
-          <Property Type="String" Name="IDAcademicoCurso" Nullable="true" MaxLength="50" />
-          <Property Type="Int64" Name="IDAcademicoSeccion" Nullable="true" />
-          <Property Type="Int32" Name="IDAcademicoUsuario" Nullable="true" />
-          <Property Type="Int32" Name="IDCanvasUsuario" Nullable="true" />
-          <Property Type="Int32" Name="IDCanvasSeccion" Nullable="true" />
-          <Property Type="Int32" Name="IDCanvasEnrolamiento" Nullable="true" />
-        </ComplexType>
         <EntityType Name="uniCanvasEnrolamiento">
           <Key>
             <PropertyRef Name="ID" />
@@ -236,6 +215,28 @@
           <Property Name="Fecha" Type="DateTime" Precision="3" />
           <Property Name="IDAcademicoGrupo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="uniCanvasCursosSeccione">
+          <Key>
+            <PropertyRef Name="IDAcademico" />
+          </Key>
+          <Property Name="IDAcademico" Type="Int64" Nullable="false" />
+          <Property Name="IDAcademicoCurso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDCanvas" Type="Int32" />
+          <Property Name="IDCanvasGrupo" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="sp_get_uniCanvas_ws_enrolamientos_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="IDAcademicoCurso" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="IDAcademicoSeccion" Nullable="true" />
+          <Property Type="Int32" Name="IDAcademicoUsuario" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvasUsuario" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvasSeccion" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvasEnrolamiento" Nullable="true" />
+          <Property Type="Int32" Name="IDCanvasGrupo" Nullable="true" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -329,6 +330,7 @@
                 <ScalarProperty Name="IDCanvasUsuario" ColumnName="IDCanvasUsuario" />
                 <ScalarProperty Name="IDCanvasSeccion" ColumnName="IDCanvasSeccion" />
                 <ScalarProperty Name="IDCanvasEnrolamiento" ColumnName="IDCanvasEnrolamiento" />
+                <ScalarProperty Name="IDCanvasGrupo" ColumnName="IDCanvasGrupo" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -353,19 +355,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="uniCanvasCursosSecciones">
-            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasCursosSeccione">
-              <MappingFragment StoreEntitySet="uniCanvasCursosSecciones">
-                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-                <ScalarProperty Name="Error" ColumnName="Error" />
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
-                <ScalarProperty Name="IDAcademicoCurso" ColumnName="IDAcademicoCurso" />
-                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="uniCanvasEnrolamientos">
             <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasEnrolamiento">
               <MappingFragment StoreEntitySet="uniCanvasEnrolamientos">
@@ -378,6 +367,19 @@
                 <ScalarProperty Name="IDAcademicoSeccion" ColumnName="IDAcademicoSeccion" />
                 <ScalarProperty Name="IDAcademicoUsuario" ColumnName="IDAcademicoUsuario" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uniCanvasCursosSecciones">
+            <EntityTypeMapping TypeName="CANVAS_Data_Model.uniCanvasCursosSeccione">
+              <MappingFragment StoreEntitySet="uniCanvasCursosSecciones">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IDCanvasGrupo" ColumnName="IDCanvasGrupo" />
+                <ScalarProperty Name="IDCanvas" ColumnName="IDCanvas" />
+                <ScalarProperty Name="IDAcademicoCurso" ColumnName="IDAcademicoCurso" />
+                <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
