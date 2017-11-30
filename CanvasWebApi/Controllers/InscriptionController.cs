@@ -129,7 +129,7 @@ namespace CanvasWebApi.Controllers
             return null;
         }
 
-        public InscriptionReturn InactivateInscription(string iDAcademicoCurso, int? iDCanvasEnrolamiento)
+        public InscriptionReturn DeleteInscription(string iDAcademicoCurso, int? iDCanvasEnrolamiento)
         {
             logger.Info("InscriptionService/InactivateInscription - Task 'Inactivate inscription' STARTED");
 
@@ -140,7 +140,7 @@ namespace CanvasWebApi.Controllers
 
                 string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
 
-                string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento + "?task=deactivate";
+                string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento + "?task=delete";
 
                 try
                 {
@@ -183,7 +183,7 @@ namespace CanvasWebApi.Controllers
                     {
                         HttpContext.Current.Request.Headers.Remove("Authorization");
                         HttpContext.Current.Request.Headers.Add("Authorization", SessionController.GetToken());
-                        return InactivateInscription(iDAcademicoCurso, iDCanvasEnrolamiento);
+                        return DeleteInscription(iDAcademicoCurso, iDCanvasEnrolamiento);
                     }
 
                     if (e.Message.Contains(HttpStatusCode.BadRequest.ToString()))
@@ -282,7 +282,7 @@ namespace CanvasWebApi.Controllers
                     {
                         HttpContext.Current.Request.Headers.Remove("Authorization");
                         HttpContext.Current.Request.Headers.Add("Authorization", SessionController.GetToken());
-                        return InactivateInscription(iDAcademicoCurso, iDCanvasEnrolamiento);
+                        return ConcludeInscription(iDAcademicoCurso, iDCanvasEnrolamiento);
                     }
 
                     if (e.Message.Contains(HttpStatusCode.BadRequest.ToString()))

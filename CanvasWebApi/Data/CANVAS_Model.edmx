@@ -184,10 +184,6 @@
           <Property Name="ConceptoId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="EsOptativaGeneral" Type="Boolean" />
         </EntityType>
-        <ComplexType Name="sp_get_uniCanvas_ws_cursos_Result">
-          <Property Type="String" Name="IDAcademico" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
-        </ComplexType>
         <ComplexType Name="sp_get_uniCanvas_ws_usuarios_Result">
           <Property Type="Int32" Name="IDAcademico" Nullable="false" />
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
@@ -236,6 +232,12 @@
           <Property Type="Int32" Name="IDCanvasSeccion" Nullable="true" />
           <Property Type="Int32" Name="IDCanvasEnrolamiento" Nullable="true" />
           <Property Type="Int32" Name="IDCanvasGrupo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_get_uniCanvas_ws_cursos_Result">
+          <Property Type="String" Name="IDAcademico" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="IDAcademicoMaster" Nullable="true" />
+          <Property Type="Boolean" Name="ImportarContenido" Nullable="false" />
         </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
@@ -317,6 +319,8 @@
               <ComplexTypeMapping TypeName="CANVAS_Data_Model.sp_get_uniCanvas_ws_cursos_Result">
                 <ScalarProperty Name="IDAcademico" ColumnName="IDAcademico" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDAcademicoMaster" ColumnName="IDAcademicoMaster" />
+                <ScalarProperty Name="ImportarContenido" ColumnName="ImportarContenido" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
