@@ -14,7 +14,7 @@ namespace CanvasWebApi.Data
             {
                 return context.sp_uni_canvas_sincronizacion().ToList();
             }
-        }//
+        }
 
         internal static List<sp_get_uniCanvas_ws_cursos_Result> CoursesToSync()
         {
