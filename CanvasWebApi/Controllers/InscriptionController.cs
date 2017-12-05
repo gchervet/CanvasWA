@@ -250,7 +250,7 @@ namespace CanvasWebApi.Controllers
 
                     WebResponse response = request.GetResponse();
                     Console.WriteLine(((HttpWebResponse)response).StatusDescription);
-                    dataStream = response.GetResponseStream();
+                    dataStream = response.GetResponseStream(); //
 
                     StreamReader reader = new StreamReader(dataStream);
                     object rtn = JsonConvert.DeserializeObject<InscriptionReturn>(reader.ReadToEnd());
