@@ -24,6 +24,7 @@ namespace CanvasWebApi.Data
                 return context.sp_get_uniCanvas_ws_cursos().ToList();
             }
         }
+        //NUEVO CAMBIO
 
         internal static string GetSubjectName(string id)
         {
