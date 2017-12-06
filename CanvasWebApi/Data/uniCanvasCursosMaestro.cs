@@ -10,13 +10,12 @@
 namespace CanvasWebApi.Data
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class sp_get_uniCanvas_ws_cursos_Result
+    public partial class uniCanvasCursosMaestro
     {
-        public string IDAcademico { get; set; }
+        public string ID { get; set; }
         public string Nombre { get; set; }
-        public string Termino { get; set; }
-        public string IDAcademicoMaster { get; set; }
-        public Nullable<bool> ImportarContenido { get; set; }
+        public Nullable<int> IDCanvas { get; set; }
     }
 }

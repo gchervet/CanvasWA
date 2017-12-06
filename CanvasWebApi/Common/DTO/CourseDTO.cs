@@ -40,7 +40,7 @@ namespace CanvasWebApi.Common
             code = courseToSync.IDAcademico;
             sis_master_id = courseToSync.IDAcademicoMaster;
             import_content = courseToSync.ImportarContenido;
-            //term_id = courseToSync.IDAcademicoTermino;
+            term_id = courseToSync.Termino;
         }
 
         public int account_id { get; set; }
@@ -52,7 +52,7 @@ namespace CanvasWebApi.Common
         public string sis_course_id { get; set; }
         public string id { get; set; }
         public string status { get; set; }
-        public bool import_content { get; set; }
+        public Nullable<bool> import_content { get; set; }
         public string sis_master_id { get; set; }
     }
 

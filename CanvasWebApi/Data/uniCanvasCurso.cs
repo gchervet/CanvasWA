@@ -16,6 +16,9 @@ namespace CanvasWebApi.Data
     {
         public string IDAcademico { get; set; }
         public string NombreCustom { get; set; }
+        public string Termino { get; set; }
+        public string MasterDefault { get; set; }
+        public Nullable<bool> ImportaContenido { get; set; }
         public Nullable<int> IDCanvas { get; set; }
         public Nullable<int> Estado { get; set; }
         public string Error { get; set; }

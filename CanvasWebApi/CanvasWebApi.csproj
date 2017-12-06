@@ -205,6 +205,9 @@
     <Compile Include="Data\uniCanvasCurso.cs">
       <DependentUpon>CANVAS_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\uniCanvasCursosMaestro.cs">
+      <DependentUpon>CANVAS_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\uniCanvasCursosSeccione.cs">
       <DependentUpon>CANVAS_Model.tt</DependentUpon>
     </Compile>

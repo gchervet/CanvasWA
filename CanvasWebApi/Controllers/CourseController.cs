@@ -43,12 +43,14 @@ namespace CanvasWebApi.Controllers
                     request.Method = "POST";
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
 
+                    bool import_content = courseDTO.course.import_content.HasValue ? courseDTO.course.import_content.Value : false; 
+
                     string postData =
                     "{" +
                         "\"course\": " +
                         "{" +
                             "\"sis_course_id\":\"" + courseDTO.course.sis_course_id + "\"," +
-                            "\"account_id\":" + courseDTO.course.account_id + "," +
+                            "\"account_id\":1," + //courseDTO.course.account_id + "," +
                             "\"name\":\"" + courseDTO.course.name + "\"," +
                             "\"code\":\"" + courseDTO.course.code + "\"," +
                             "\"end_at\":" + (courseDTO.course.end_at != null ? ("\"" + courseDTO.course.end_at + "\"") : "null") + "," +
@@ -57,7 +59,7 @@ namespace CanvasWebApi.Controllers
                             (courseDTO.course.sis_master_id != null ? ("," + "\"sis_master_id\":\"" + courseDTO.course.sis_master_id + "\",") : "") +
                             (courseDTO.course.term_id != null ? ("\"sis_term_id\":\"" + courseDTO.course.term_id + "\",") : "") +
                         "}," +
-                        "\"import_content\":" + "false" + "," +
+                        "\"import_content\":" + import_content.ToString().ToLower() + "," +
                         "\"publish\":" + "true" +
                     "}";
 
