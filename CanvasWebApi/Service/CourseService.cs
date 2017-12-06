@@ -46,5 +46,33 @@ namespace CanvasWebApi.Service
                 return;
             }
         }
+
+        internal static List<CourseToConcludeDTO> GetCourseToConcludeList()
+        {
+            try
+            {
+                SyncronizationDAL.SyncToCanvas();
+                List<CourseToConcludeDTO> rtn = new List<CourseToConcludeDTO>();
+
+                List<sp_get_uniCanvas_ws_cursos_Result> courseToConcludeList = CourseDAL.CoursesToConclude();
+                foreach (sp_get_uniCanvas_ws_cursos_Result courseToConclude in courseToConcludeList)
+                {
+                    rtn.Add(new CourseToConcludeDTO(courseToConclude));    
+                }
+                return rtn;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        internal static void UpdateConcludedCourseCanvasData(string iDAcademicoCurso)
+        {
+            if(iDAcademicoCurso != null)
+            {
+                CourseDAL.UpdateCoursesConcludedCanvasData(iDAcademicoCurso);
+            }
+        }
     }
 }

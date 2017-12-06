@@ -44,7 +44,7 @@ namespace CanvasWebApi.Controllers
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
 
                     string postData =
-                    "{" + 
+                    "{" +
                         "\"course\": " +
                         "{" +
                             "\"sis_course_id\":\"" + courseDTO.course.sis_course_id + "\"," +
@@ -204,6 +204,59 @@ namespace CanvasWebApi.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Verifica si el alumno tiene los datos actualizados en función a la cantidad de meses enviada
+        /// </summary>
+        /// <param name="username">Nombre de usuario del alumno</param>
+        /// <param name="cantMeses">Cantidad de meses para verificar, 6 por defecto</param>
+        /// <returns>True si la información está actualizada. False en caso contrario</returns>
+        [Route("ConcludeCourse")]
+        [HttpPost]
+        public object ConcludeCourse([FromBody] Course courseDTO)
+        {
+            string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
+            string tokenString = SessionController.GetToken();
+            string action = "conclude";            
+
+            List<CourseToConcludeDTO> courseToConcludeList = CourseService.GetCourseToConcludeList();
+            foreach (CourseToConcludeDTO courseToConclude in courseToConcludeList)
+            {
+                WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + @"/api/lms/v1/courses/sis_course_id:" + courseToConclude.IDAcademicoCurso + "?event=" + action);
+                request.Method = "DELETE";
+                request.Headers.Add(HttpRequestHeader.Authorization, tokenString);
+
+                Stream dataStream = request.GetRequestStream();
+                
+                WebResponse response = request.GetResponse();
+                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+                dataStream = response.GetResponseStream();
+
+                StreamReader reader = new StreamReader(dataStream);
+                object rtn = JsonConvert.DeserializeObject<CourseReturn>(reader.ReadToEnd());
+                if (rtn != null)
+                {
+                    logger.Info("CourseController/ConcludeCourse - Task 'Create course' STARTED");
+                    CourseService.UpdateConcludedCourseCanvasData(courseToConclude.IDAcademicoCurso);
+                }
+
+                //rtn = JsonConvert.DeserializeObject<ErrorMessage>(reader.ReadToEnd());
+                //if (rtn != null)
+                //{
+                //    ErrorMessage errorMessageDto = JsonConvert.DeserializeObject<ErrorMessage>(reader.ReadToEnd());
+                //    if (errorMessageDto != null)
+                //    {
+                //        logger.Info("CourseController/ConcludeCourse - Task 'Create course' FINISHED");
+                //        return new CourseReturn() { error_message = errorMessageDto.errors.First().message };
+                //    }
+                //    logger.Info("CourseController/ConcludeCourse - Task 'Create course' FINISHED");
+                //    return null;
+                //}
+                //logger.Info("CourseController/ConcludeCourse - Task 'Create course' FINISHED");
+                //return null;
+            }
+            return null;
+        }
         /// <summary>
         /// Obtiene un usuario
         /// </summary>

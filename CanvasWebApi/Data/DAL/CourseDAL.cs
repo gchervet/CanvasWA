@@ -24,7 +24,6 @@ namespace CanvasWebApi.Data
                 return context.sp_get_uniCanvas_ws_cursos().ToList();
             }
         }
-        //NUEVO CAMBIO
 
         internal static string GetSubjectName(string id)
         {
@@ -57,6 +56,30 @@ namespace CanvasWebApi.Data
 
                     newCanvasCourse.Error = newCourse.error_message;
                     context.SaveChanges();
+                }
+            }
+        }
+
+        //TODO: Obtener los datos desde la SP de cursos a concluir y  modificar el circuito desde el controlador hasta la DAL
+        internal static List<sp_get_uniCanvas_ws_cursos_Result> CoursesToConclude()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void UpdateCoursesConcludedCanvasData(string iDAcademicoCurso)
+        {
+            using (var context = new CANVAS_Model_Entities())
+            {
+                uniCanvasCurso uniCanvasCursoModel = context.uniCanvasCursos.Where(x => x.IDAcademico == iDAcademicoCurso).FirstOrDefault();
+
+                if (uniCanvasCursoModel != null)
+                {
+                    //uniCanvasCursoModel.Concluido = true;
+                    context.SaveChanges();
+                }
+                else
+                {
+                    //TODO: Loguear la falta del curso en la staging
                 }
             }
         }

@@ -30,6 +30,7 @@ namespace CanvasWebApi.Common
         [JsonConstructor]
         public CourseDTO() { }
 
+        //TODO: Agregar Term id
         public CourseDTO(sp_get_uniCanvas_ws_cursos_Result courseToSync)
         {
             account_id = 1;
@@ -39,6 +40,7 @@ namespace CanvasWebApi.Common
             code = courseToSync.IDAcademico;
             sis_master_id = courseToSync.IDAcademicoMaster;
             import_content = courseToSync.ImportarContenido;
+            //term_id = courseToSync.IDAcademicoTermino;
         }
 
         public int account_id { get; set; }
@@ -52,5 +54,18 @@ namespace CanvasWebApi.Common
         public string status { get; set; }
         public bool import_content { get; set; }
         public string sis_master_id { get; set; }
+    }
+
+    public class CourseToConcludeDTO
+    {
+        [JsonConstructor]
+        public CourseToConcludeDTO() { }
+
+        public CourseToConcludeDTO(sp_get_uniCanvas_ws_cursos_Result courseToConcludeModel)
+        {
+            IDAcademicoCurso = courseToConcludeModel.IDAcademico;
+        }
+
+        public string IDAcademicoCurso { get; set; }
     }
 }
