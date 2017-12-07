@@ -32,6 +32,7 @@ namespace CanvasWebApi.Common
             sis_section_id = inscriptionResult.IDAcademicoSeccion.ToString();
             section_id = inscriptionResult.IDCanvasSeccion.ToString();
             user_id = inscriptionResult.IDCanvasUsuario.ToString();
+            group_id = inscriptionResult.IDCanvasGrupo;
             type = "StudentEnrollment";
         }
 

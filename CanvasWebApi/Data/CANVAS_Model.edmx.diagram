@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="CANVAS_Data_Model.uniCanvasCarrera" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="CANVAS_Data_Model.uniCanvasUsuario" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="CANVAS_Data_Model.uniMateria" Width="1.5" PointX="5.375" PointY="3.75" />
-        <EntityTypeShape EntityType="CANVAS_Data_Model.uniCanvasEnrolamiento" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CANVAS_Data_Model.uniCanvasEnrolamiento" Width="3.625" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="CANVAS_Data_Model.uniCanvasCurso" Width="1.5" PointX="0.75" PointY="7.75" />
         <EntityTypeShape EntityType="CANVAS_Data_Model.uniCanvasCursosMaestro" Width="1.5" PointX="7.75" PointY="4.75" />
         <EntityTypeShape EntityType="CANVAS_Data_Model.uniCanvasCursosSeccione" Width="1.5" PointX="0.75" PointY="3.75" />
