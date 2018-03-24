@@ -49,16 +49,15 @@ namespace CanvasWebApi.Controllers
                     request.Method = "POST";
 
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
+                    string isolate_section = sectionDTO.course_section.isolate_section.HasValue ? sectionDTO.course_section.isolate_section.Value.ToString().ToLower() : "true";
 
                     string postData = 
                     "{" +
                        "\"course_section\": " +
                        "{" +
                            "\"name\":\"" + sectionDTO.course_section.name + "\"" + "," +
-                           "\"end_at\":" + (sectionDTO.course_section.end_at != null ? ("\"" + sectionDTO.course_section.end_at + "\"") : "null") + "," +
-                           "\"start_at\":" + (sectionDTO.course_section.start_at != null ? ("\"" + sectionDTO.course_section.start_at + "\"") : "null") + "," +
                            "\"sis_section_id\":\"" + sectionDTO.course_section.sis_section_id + "\"," +
-                           "\"isolate_section\":" + "true" + "," +
+                           "\"isolate_section\":" + isolate_section + "," +
                            "\"restrict_to_dates\":" + "false" +
                        "}" +
                    "}";

@@ -27,10 +27,10 @@ namespace CanvasWebApi.Controllers
         public static string GetToken()
         {
             // TEST
-            string url = "https://apis-lms.qailumno.com/token?grant_type=client_credentials";
+            //string url = "https://apis-lms.qailumno.com/token?grant_type=client_credentials";
 
             // PROD
-            //string url = "https://apis-kennedy.ilumno.com/token?grant_type=client_credentials";
+            string url = "https://apis-lms.ilumno.com/token?grant_type=client_credentials";
             try
             {
                 string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];

@@ -1,4 +1,5 @@
 ﻿using CanvasWebApi.Common;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,8 @@ namespace CanvasWebApi.Data
 {
     public class CourseDAL
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         public static List<sp_uni_canvas_sincronizacion_Result> SyncToCanvas()
         {
             using (var context = new CANVAS_Model_Entities())
@@ -61,25 +64,36 @@ namespace CanvasWebApi.Data
         }
 
         //TODO: Obtener los datos desde la SP de cursos a concluir y  modificar el circuito desde el controlador hasta la DAL
-        internal static List<sp_get_uniCanvas_ws_cursos_Result> CoursesToConclude()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void UpdateCoursesConcludedCanvasData(string iDAcademicoCurso)
+        internal static List<uniCanvasCurso> CoursesToConclude(string termino)
         {
             using (var context = new CANVAS_Model_Entities())
             {
-                uniCanvasCurso uniCanvasCursoModel = context.uniCanvasCursos.Where(x => x.IDAcademico == iDAcademicoCurso).FirstOrDefault();
+                // http://localhost:52519/API/COURSE/ConcludeCourse?termino=3er%20cuat%202017
+                // espacio en url es %20
 
-                if (uniCanvasCursoModel != null)
+                int estadoSincronizado = ConfigEnum.CanvasState.Sincronizado.GetHashCode();
+                return context.uniCanvasCursos.Where(x => x.Termino == termino && (!x.Concluido.HasValue || !x.Concluido.Value) && x.Estado == estadoSincronizado).ToList();
+            }
+        }
+
+        public static void UpdateConcludedCourseCanvasData(uniCanvasCurso aux)
+        {
+            // TODO: Enviar solo el ID como parametro
+            using (var context = new CANVAS_Model_Entities())
+            {
+                try
                 {
-                    //uniCanvasCursoModel.Concluido = true;
-                    context.SaveChanges();
+                    uniCanvasCurso courseToConclude = context.uniCanvasCursos.Where(x => x.IDAcademico == aux.IDAcademico).FirstOrDefault();
+                    if (courseToConclude != null)
+                    {
+                        courseToConclude.Concluido = true;
+                        context.SaveChanges();
+                    }
                 }
-                else
+                catch
                 {
                     //TODO: Loguear la falta del curso en la staging
+                    logger.Error("Error al marcar el curso " + aux.IDAcademico + " como concluido.");
                 }
             }
         }

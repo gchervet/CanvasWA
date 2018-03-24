@@ -20,7 +20,7 @@ namespace CanvasWebApi.Common
             name = sectionToSync.Nombre;
             sis_course_id = sectionToSync.IDAcademicoCurso.ToString();
             sis_section_id = sectionToSync.IDAcademico.ToString();
-            isolate_section = false;
+            isolate_section = sectionToSync.SeccionAislada;
         }
 
         public string id { get; set; }
@@ -31,7 +31,7 @@ namespace CanvasWebApi.Common
         public string name { get; set; }
         public DateTime start_at { get; set; }
         public DateTime end_at { get; set; }
-        public bool isolate_section { get; set; }
+        public Nullable<bool> isolate_section { get; set; }
         public string error_message { get; set; }
         public int? group_id { get; set; }
     }

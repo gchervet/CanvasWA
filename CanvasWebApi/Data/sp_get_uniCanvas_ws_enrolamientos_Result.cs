@@ -18,6 +18,7 @@ namespace CanvasWebApi.Data
         public Nullable<long> IDAcademicoSeccion { get; set; }
         public Nullable<int> IDAcademicoUsuario { get; set; }
         public Nullable<int> IDCanvasUsuario { get; set; }
+        public Nullable<int> IDCanvasCurso { get; set; }
         public Nullable<int> IDCanvasSeccion { get; set; }
         public Nullable<int> IDCanvasEnrolamiento { get; set; }
         public Nullable<int> IDCanvasGrupo { get; set; }

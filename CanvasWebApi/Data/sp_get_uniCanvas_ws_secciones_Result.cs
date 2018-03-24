@@ -17,5 +17,6 @@ namespace CanvasWebApi.Data
         public string IDAcademicoCurso { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> IDCanvasCurso { get; set; }
+        public Nullable<bool> SeccionAislada { get; set; }
     }
 }

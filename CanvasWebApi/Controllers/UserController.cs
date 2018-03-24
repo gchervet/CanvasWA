@@ -116,6 +116,7 @@ namespace CanvasWebApi.Controllers
                     }
                     return new UserReturn() { error_message = e.ToString() };
                 }
+                throw e;
             }
             logger.Info("UserController/Create - Task 'Create user' FINISHED");
             return null;

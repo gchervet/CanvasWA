@@ -12,10 +12,10 @@ namespace CanvasWebApi.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class uniCanvasCurso
+    public partial class uniCanvasCursosGenerale
     {
-        public string IDAcademico { get; set; }
-        public string NombreCustom { get; set; }
+        public string ID { get; set; }
+        public string Nombre { get; set; }
         public string Termino { get; set; }
         public string MasterDefault { get; set; }
         public Nullable<bool> ImportaContenido { get; set; }
@@ -25,6 +25,5 @@ namespace CanvasWebApi.Data
         public Nullable<int> Estado { get; set; }
         public string Error { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
-        public Nullable<bool> Concluido { get; set; }
     }
 }

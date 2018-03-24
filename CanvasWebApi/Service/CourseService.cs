@@ -47,19 +47,11 @@ namespace CanvasWebApi.Service
             }
         }
 
-        internal static List<CourseToConcludeDTO> GetCourseToConcludeList()
+        internal static List<uniCanvasCurso> GetCourseToConcludeList(string termino)
         {
             try
             {
-                SyncronizationDAL.SyncToCanvas();
-                List<CourseToConcludeDTO> rtn = new List<CourseToConcludeDTO>();
-
-                List<sp_get_uniCanvas_ws_cursos_Result> courseToConcludeList = CourseDAL.CoursesToConclude();
-                foreach (sp_get_uniCanvas_ws_cursos_Result courseToConclude in courseToConcludeList)
-                {
-                    rtn.Add(new CourseToConcludeDTO(courseToConclude));    
-                }
-                return rtn;
+                return CourseDAL.CoursesToConclude(termino);
             }
             catch (Exception e)
             {
@@ -67,11 +59,11 @@ namespace CanvasWebApi.Service
             }
         }
 
-        internal static void UpdateConcludedCourseCanvasData(string iDAcademicoCurso)
+        internal static void UpdateConcludedCourseCanvasData(uniCanvasCurso courseToConclude)
         {
-            if(iDAcademicoCurso != null)
+            if (courseToConclude != null)
             {
-                CourseDAL.UpdateCoursesConcludedCanvasData(iDAcademicoCurso);
+                CourseDAL.UpdateConcludedCourseCanvasData(courseToConclude);
             }
         }
     }

@@ -68,7 +68,10 @@ namespace CanvasWebApi.Data
                         newCanvasCourseSection.IDCanvasGrupo = canvasGroupId;
                     }
                     else
+                    {
                         newCanvasCourseSection.Estado = CanvasWebApi.Common.ConfigEnum.CanvasState.Error.GetHashCode();
+                        newCanvasCourseSection.Fecha = DateTime.Now;
+                    }
 
                     newCanvasCourseSection.Error = newSection.error_message;
                     context.SaveChanges();

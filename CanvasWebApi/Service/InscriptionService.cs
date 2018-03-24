@@ -45,7 +45,7 @@ namespace CanvasWebApi.Service
                             }
                             else if (enrollmentOperation == CanvasWebApi.Common.ConfigEnum.Enrollment_Operation.B)
                             {
-                                InscriptionReturn newInscription = (InscriptionReturn)inscriptionController.DeleteInscription(inscriptionToSync.IDAcademicoCurso, inscriptionToSync.IDCanvasEnrolamiento);
+                                InscriptionReturn newInscription = (InscriptionReturn)inscriptionController.DeleteInscription(inscriptionToSync.IDCanvasCurso, inscriptionToSync.IDCanvasEnrolamiento);
 
                                 if (newInscription != null)
                                 {

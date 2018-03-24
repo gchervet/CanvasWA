@@ -30,10 +30,11 @@ namespace CanvasWebApi.Data
         public virtual DbSet<uniCanvasCarrera> uniCanvasCarreras { get; set; }
         public virtual DbSet<uniCanvasUsuario> uniCanvasUsuarios { get; set; }
         public virtual DbSet<uniMateria> uniMaterias { get; set; }
-        public virtual DbSet<uniCanvasEnrolamiento> uniCanvasEnrolamientos { get; set; }
-        public virtual DbSet<uniCanvasCurso> uniCanvasCursos { get; set; }
         public virtual DbSet<uniCanvasCursosMaestro> uniCanvasCursosMaestros { get; set; }
         public virtual DbSet<uniCanvasCursosSeccione> uniCanvasCursosSecciones { get; set; }
+        public virtual DbSet<uniCanvasCursosGenerale> uniCanvasCursosGenerales { get; set; }
+        public virtual DbSet<uniCanvasEnrolamiento> uniCanvasEnrolamientos { get; set; }
+        public virtual DbSet<uniCanvasCurso> uniCanvasCursos { get; set; }
     
         public virtual ObjectResult<sp_uni_canvas_sincronizacion_Result> sp_uni_canvas_sincronizacion()
         {

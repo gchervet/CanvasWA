@@ -16,7 +16,10 @@ namespace CanvasWebApi.Data
         public string IDAcademico { get; set; }
         public string Nombre { get; set; }
         public string Termino { get; set; }
+        public Nullable<System.DateTime> FechaInicio { get; set; }
+        public Nullable<System.DateTime> FechaFin { get; set; }
         public string IDAcademicoMaster { get; set; }
         public Nullable<bool> ImportarContenido { get; set; }
+        public Nullable<int> IDCanvasCuenta { get; set; }
     }
 }

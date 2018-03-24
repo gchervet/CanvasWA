@@ -30,20 +30,21 @@ namespace CanvasWebApi.Common
         [JsonConstructor]
         public CourseDTO() { }
 
-        //TODO: Agregar Term id
         public CourseDTO(sp_get_uniCanvas_ws_cursos_Result courseToSync)
         {
-            account_id = 1;
+            account_id = courseToSync.IDCanvasCuenta;
             sis_course_id = courseToSync.IDAcademico;
             name = courseToSync.Nombre;
             term_id = "term";
-            code = courseToSync.IDAcademico;
+            code = String.Format("{0} ({1})", courseToSync.Nombre, courseToSync.IDAcademico);
             sis_master_id = courseToSync.IDAcademicoMaster;
             import_content = courseToSync.ImportarContenido;
             term_id = courseToSync.Termino;
+            end_at = courseToSync.FechaFin;
+            start_at = courseToSync.FechaInicio;
         }
 
-        public int account_id { get; set; }
+        public Nullable<int> account_id { get; set; }
         public string name { get; set; }
         public string code { get; set; }
         public Nullable<DateTime> start_at { get; set; }

@@ -1,4 +1,5 @@
 ﻿using CanvasWebApi.Common;
+using CanvasWebApi.Data;
 using CanvasWebApi.Service;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -50,14 +51,14 @@ namespace CanvasWebApi.Controllers
                         "\"course\": " +
                         "{" +
                             "\"sis_course_id\":\"" + courseDTO.course.sis_course_id + "\"," +
-                            "\"account_id\":1," + //courseDTO.course.account_id + "," +
+                            "\"account_id\":" + (courseDTO.course.account_id.HasValue ? courseDTO.course.account_id.Value : 1) + "," +
                             "\"name\":\"" + courseDTO.course.name + "\"," +
-                            "\"code\":\"" + courseDTO.course.code + "\"," +
+                            "\"code\":\"" + courseDTO.course.code + "\"," + 
                             "\"end_at\":" + (courseDTO.course.end_at != null ? ("\"" + courseDTO.course.end_at + "\"") : "null") + "," +
                             "\"start_at\":" + (courseDTO.course.start_at != null ? ("\"" + courseDTO.course.start_at + "\"") : "null") + "," +
-                            "\"restrict_to_dates\":" + "false" +
+                            "\"restrict_to_dates\":" + "true" +
                             (courseDTO.course.sis_master_id != null ? ("," + "\"sis_master_id\":\"" + courseDTO.course.sis_master_id + "\",") : "") +
-                            (courseDTO.course.term_id != null ? ("\"sis_term_id\":\"" + courseDTO.course.term_id + "\",") : "") +
+                            (courseDTO.course.term_id != null ? ("\"sis_term_id\":\"" + courseDTO.course.term_id + "\"") : "") +
                         "}," +
                         "\"import_content\":" + import_content.ToString().ToLower() + "," +
                         "\"publish\":" + "true" +
@@ -123,6 +124,7 @@ namespace CanvasWebApi.Controllers
                         }
                         return new CourseReturn() { error_message = e.ToString() };
                     }
+                    throw e;
                 }
             }
             logger.Info("CourseController/Create - Task 'Create course' FINISHED");
@@ -215,16 +217,16 @@ namespace CanvasWebApi.Controllers
         /// <returns>True si la información está actualizada. False en caso contrario</returns>
         [Route("ConcludeCourse")]
         [HttpPost]
-        public object ConcludeCourse([FromBody] Course courseDTO)
+        public object ConcludeCourse(string termino)
         {
             string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
             string tokenString = SessionController.GetToken();
-            string action = "conclude";            
+            string action = "conclude";
 
-            List<CourseToConcludeDTO> courseToConcludeList = CourseService.GetCourseToConcludeList();
-            foreach (CourseToConcludeDTO courseToConclude in courseToConcludeList)
+            List<uniCanvasCurso> courseToConcludeList = CourseService.GetCourseToConcludeList(termino);
+            foreach (uniCanvasCurso courseToConclude in courseToConcludeList)
             {
-                WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + @"/api/lms/v1/courses/sis_course_id:" + courseToConclude.IDAcademicoCurso + "?event=" + action);
+                WebRequest request = WebRequest.Create(WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + @"/api/lms/v1/courses/sis_course_id:" + courseToConclude.IDAcademico + "?event=" + action);
                 request.Method = "DELETE";
                 request.Headers.Add(HttpRequestHeader.Authorization, tokenString);
 
@@ -239,23 +241,8 @@ namespace CanvasWebApi.Controllers
                 if (rtn != null)
                 {
                     logger.Info("CourseController/ConcludeCourse - Task 'Create course' STARTED");
-                    CourseService.UpdateConcludedCourseCanvasData(courseToConclude.IDAcademicoCurso);
+                    CourseService.UpdateConcludedCourseCanvasData(courseToConclude);
                 }
-
-                //rtn = JsonConvert.DeserializeObject<ErrorMessage>(reader.ReadToEnd());
-                //if (rtn != null)
-                //{
-                //    ErrorMessage errorMessageDto = JsonConvert.DeserializeObject<ErrorMessage>(reader.ReadToEnd());
-                //    if (errorMessageDto != null)
-                //    {
-                //        logger.Info("CourseController/ConcludeCourse - Task 'Create course' FINISHED");
-                //        return new CourseReturn() { error_message = errorMessageDto.errors.First().message };
-                //    }
-                //    logger.Info("CourseController/ConcludeCourse - Task 'Create course' FINISHED");
-                //    return null;
-                //}
-                //logger.Info("CourseController/ConcludeCourse - Task 'Create course' FINISHED");
-                //return null;
             }
             return null;
         }
