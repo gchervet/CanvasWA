@@ -143,7 +143,7 @@ namespace CanvasWebApi.Controllers
                 string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento + "?task=delete";
 
                 try
-                {
+                { 
                     WebRequest request = WebRequest.Create(url);
                     request.Method = "DELETE";
 
