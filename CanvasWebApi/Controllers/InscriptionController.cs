@@ -60,7 +60,7 @@ namespace CanvasWebApi.Controllers
                            "\"sis_section_id\":" + inscriptionDTO.enrollment.sis_section_id + "," +
                            "\"state\":\"" + "active" + "\"," +
                            "\"send_notification\":" + "false" + "," +
-                           "\"limit_interaction\":" + inscriptionDTO.enrollment.group_id != null ? "true" : "false" +
+                           "\"limit_interaction\":" + (inscriptionDTO.enrollment.group_id != null ? "true" : "false") +
                            (inscriptionDTO.enrollment.group_id != null ? "," + "\"group_id\":" + inscriptionDTO.enrollment.group_id : "") +
                        "}" +
                    "}";
