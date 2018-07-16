@@ -39,7 +39,7 @@ namespace CanvasWebApi.Controllers
 
             string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
 
-            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.Expect100Continue = false;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
 
@@ -135,12 +135,12 @@ namespace CanvasWebApi.Controllers
 
             if (iDAcademicoCurso != null)
             {
-                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.Expect100Continue = false;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
 
-                string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento + "?task=delete";
+                string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento + "?action=delete";
 
                 try
                 { 
@@ -221,7 +221,7 @@ namespace CanvasWebApi.Controllers
             if (iDAcademicoCurso != null)
             {
                 string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
-                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.Expect100Continue = false;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento;

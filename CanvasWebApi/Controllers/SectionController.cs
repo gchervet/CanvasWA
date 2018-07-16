@@ -33,6 +33,8 @@ namespace CanvasWebApi.Controllers
         {
             logger.Info("SectionController/Create - Task 'Create section' STARTED");
 
+            ServicePointManager.Expect100Continue = false;
+
             if (sectionDTO != null)
             {
                 string url = string.Empty;
@@ -47,6 +49,8 @@ namespace CanvasWebApi.Controllers
                 {
                     WebRequest request = WebRequest.Create(url);
                     request.Method = "POST";
+
+                    request.Timeout = 240000;
 
                     request.Headers.Add(HttpRequestHeader.Authorization, SessionController.GetToken());
                     string isolate_section = sectionDTO.course_section.isolate_section.HasValue ? sectionDTO.course_section.isolate_section.Value.ToString().ToLower() : "true";
