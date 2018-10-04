@@ -29,5 +29,6 @@ namespace CanvasWebApi.Data
         public Nullable<double> hsclinica { get; set; }
         public string ConceptoId { get; set; }
         public Nullable<bool> EsOptativaGeneral { get; set; }
+        public Nullable<bool> Promocionable { get; set; }
     }
 }

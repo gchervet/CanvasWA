@@ -33,7 +33,7 @@ namespace CanvasWebApi.Common
             section_id = inscriptionResult.IDCanvasSeccion.ToString();
             user_id = inscriptionResult.IDCanvasUsuario.ToString();
             group_id = inscriptionResult.IDCanvasGrupo;
-            type = "StudentEnrollment";
+            type = inscriptionResult.Tipo;
         }
 
         public string user_id { get; set; }

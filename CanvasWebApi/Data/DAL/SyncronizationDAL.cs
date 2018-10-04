@@ -21,7 +21,9 @@ namespace CanvasWebApi.Data
                     int ciclo = Int32.Parse(WebConfigurationManager.AppSettings["CurrentYear"]);
                     int cuatri = Int32.Parse(WebConfigurationManager.AppSettings["CurrentQuarter"]);
 
-                    context.sp_ins_uniCanvas_cursos_secciones();
+                    context.Database.CommandTimeout = 180;
+
+                    context.sp_ins_uniCanvas_cursos_secciones(false);
                     logger.Info("SyncronizationDAL/SyncToCanvas - Task 'Sync user' INFO: CURSOS Y SECCIONES SINCRONIZADAS");
                     context.sp_ins_uniCanvas_usuarios_enrolamientos(ciclo, cuatri);
                     logger.Info("SyncronizationDAL/SyncToCanvas - Task 'Sync user' INFO: USUARIOS Y ENROLAMIENTOS SINCRONIZADOS");

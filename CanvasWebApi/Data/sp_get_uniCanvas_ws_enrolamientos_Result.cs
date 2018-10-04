@@ -22,5 +22,6 @@ namespace CanvasWebApi.Data
         public Nullable<int> IDCanvasSeccion { get; set; }
         public Nullable<int> IDCanvasEnrolamiento { get; set; }
         public Nullable<int> IDCanvasGrupo { get; set; }
+        public string Tipo { get; set; }
     }
 }

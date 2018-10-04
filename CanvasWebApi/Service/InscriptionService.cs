@@ -43,6 +43,7 @@ namespace CanvasWebApi.Service
                                     InscriptionDAL.UpdateCanvasData((int)inscriptionToSync.ID, newInscription);
                                 }
                             }
+                            /*
                             else if (enrollmentOperation == CanvasWebApi.Common.ConfigEnum.Enrollment_Operation.B)
                             {
                                 InscriptionReturn newInscription = (InscriptionReturn)inscriptionController.DeleteInscription(inscriptionToSync.IDAcademicoCurso, inscriptionToSync.IDCanvasEnrolamiento);
@@ -52,7 +53,7 @@ namespace CanvasWebApi.Service
                                     InscriptionDAL.UpdateCanvasData((int)inscriptionToSync.ID, newInscription);
                                 }
                             }
-
+                            */
                         }
                         catch (Exception e)
                         {

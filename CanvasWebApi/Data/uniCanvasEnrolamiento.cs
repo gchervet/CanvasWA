@@ -17,8 +17,12 @@ namespace CanvasWebApi.Data
         public long ID { get; set; }
         public Nullable<int> IDAcademicoUsuario { get; set; }
         public Nullable<long> IDAcademicoSeccion { get; set; }
+        public Nullable<long> IDAcademicoComision { get; set; }
         public Nullable<int> IDCanvas { get; set; }
         public string Operacion { get; set; }
+        public string Tipo { get; set; }
+        public Nullable<int> Intento { get; set; }
+        public Nullable<long> IDAcademicoRefIntento { get; set; }
         public Nullable<int> Estado { get; set; }
         public string Error { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }

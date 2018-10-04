@@ -32,3 +32,6 @@ C:\Users\jmtorres\Source\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\Canva
 \\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.csprojResolveAssemblyReference.cache
 \\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe.manifest
 \\Desarrollo0110\documentación\Para Gonzi\Repos\CanvasWebApi\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.application
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.csprojResolveAssemblyReference.cache
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.exe
+C:\Users\gchervet\Source\Repos\CanvasWA\CanvasConsoleManager\obj\Debug\CanvasConsoleManager.pdb

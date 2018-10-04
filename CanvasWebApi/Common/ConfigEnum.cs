@@ -16,8 +16,7 @@ namespace CanvasWebApi.Common
 
         public enum Enrollment_Operation
         {
-            A = 0, 
-            B = 1
+            A = 0
         }
     }
 }

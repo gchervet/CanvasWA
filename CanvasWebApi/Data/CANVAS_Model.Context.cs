@@ -20,6 +20,7 @@ namespace CanvasWebApi.Data
         public CANVAS_Model_Entities()
             : base("name=CANVAS_Model_Entities")
         {
+            ((IObjectContextAdapter)this).ObjectContext.CommandTimeout = 180;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -33,17 +34,21 @@ namespace CanvasWebApi.Data
         public virtual DbSet<uniCanvasCursosMaestro> uniCanvasCursosMaestros { get; set; }
         public virtual DbSet<uniCanvasCursosSeccione> uniCanvasCursosSecciones { get; set; }
         public virtual DbSet<uniCanvasCursosGenerale> uniCanvasCursosGenerales { get; set; }
-        public virtual DbSet<uniCanvasEnrolamiento> uniCanvasEnrolamientos { get; set; }
         public virtual DbSet<uniCanvasCurso> uniCanvasCursos { get; set; }
+        public virtual DbSet<uniCanvasEnrolamiento> uniCanvasEnrolamientos { get; set; }
     
         public virtual ObjectResult<sp_uni_canvas_sincronizacion_Result> sp_uni_canvas_sincronizacion()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_uni_canvas_sincronizacion_Result>("sp_uni_canvas_sincronizacion");
         }
     
-        public virtual int sp_ins_uniCanvas_cursos_secciones()
+        public virtual int sp_ins_uniCanvas_cursos_secciones(Nullable<bool> test)
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ins_uniCanvas_cursos_secciones");
+            var testParameter = test.HasValue ?
+                new ObjectParameter("test", test) :
+                new ObjectParameter("test", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ins_uniCanvas_cursos_secciones", testParameter);
         }
     
         public virtual int sp_ins_uniCanvas_usuarios_enrolamientos(Nullable<int> ciclo, Nullable<int> cuatri)

@@ -56,7 +56,7 @@ namespace CanvasWebApi.Controllers
                        "\"enrollment\": " +
                        "{" +
                            "\"user_id\":" + inscriptionDTO.enrollment.user_id + "," +
-                           "\"type\":\"" + "StudentEnrollment" + "\"," +
+                           "\"type\":\"" + inscriptionDTO.enrollment.type + "\"," +
                            "\"sis_section_id\":" + inscriptionDTO.enrollment.sis_section_id + "," +
                            "\"state\":\"" + "active" + "\"," +
                            "\"send_notification\":" + "false" + "," +
@@ -140,7 +140,7 @@ namespace CanvasWebApi.Controllers
 
                 string ambientPrefix = WebConfigurationManager.AppSettings["AMBIENT_PREFIX"];
 
-                string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento + "?action=delete";
+                string url = WebConfigurationManager.AppSettings[ambientPrefix + "_SERVICE_BASE_URL"] + "/api/lms/v1/courses/sis_course_id:" + iDAcademicoCurso + "/enrollments/" + iDCanvasEnrolamiento + "?task=delete";
 
                 try
                 { 

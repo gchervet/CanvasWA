@@ -26,5 +26,6 @@ namespace CanvasWebApi.Data
         public string Error { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
         public Nullable<bool> Concluido { get; set; }
+        public string Ambito { get; set; }
     }
 }
